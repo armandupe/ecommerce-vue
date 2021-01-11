@@ -1,5 +1,5 @@
 <template>
-  <div style="padding: 25px">
+  <div style="padding: 25px;">
     <div class="container">
       <div class="row">
         <div class="col-md-4" v-for="product in products" :key="product.id">
@@ -9,9 +9,10 @@
     </div>
   </div>
 </template>
+
 <script>
 import { mapActions, mapGetters } from "vuex";
-import ProductCard from "../../components/ProductCard";
+import ProductCard from "../../components/products/ProductCard";
 export default {
   computed: {
     ...mapGetters("product", ["products"]),
@@ -22,8 +23,9 @@ export default {
   },
   mounted() {
     this.getProducts();
-  },
+  }
 };
 </script>
+
 <style>
 </style>
